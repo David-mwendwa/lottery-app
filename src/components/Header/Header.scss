@@ -18,6 +18,12 @@
   font-family: $font-logo,
   cursive;
   font-size: 3rem;
+
+  a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+  }
 }
 
 .navigation {

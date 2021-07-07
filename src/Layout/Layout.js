@@ -1,17 +1,21 @@
-import Header from "../components/Header/Header";
-import Container from "../containers/Containers";
-import Footer from "../components/Footer/Footer";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import './Layout.scss'
+import Header from '../components/Header/Header';
+import Container from '../containers/Containers';
+import Footer from '../components/Footer/Footer';
+
+import './Layout.scss';
 
 const Layout = () => {
   return (
-    <div className='Layout'>
-      <Header />
-      <Container />
-      <Footer />
-    </div>
-  )
-}
+    <Router>
+      <div className='Layout'>
+        <Header />
+        <Container />
+        <Footer />
+      </div>
+    </Router>
+  );
+};
 
 export default Layout;
