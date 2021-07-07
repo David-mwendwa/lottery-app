@@ -1,0 +1,25 @@
+.Button {
+  background-color: orangered;
+  color: white;
+  width: 40%;
+  padding: 10px;
+  align-self: center;
+  border-radius: 3px;
+  border: 0px;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.Button:hover {
+  background-color: rgb(228, 77, 23);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+  
+}
+.Button:active {
+  background-color: orangered;
+  transform: translateY(-2px);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, .3);
+}
+
+/* --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+--shadow-light: 0 2rem 6rem rgba(0, 0, 0, .3) */
