@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Ball from './Ball';
-//import Button from './Button';
+import Ball from '../Ball/Ball';
+import Button from '../../../components/Button/Button';
 
-import './Lottery.css';
+import './Lottery.scss';
 
 class Lottery extends Component {
   static defaultProps = {
@@ -28,16 +28,14 @@ class Lottery extends Component {
 
   render() {
     return (
-      <div className='Lottery'>
-        <h1>{this.props.title}</h1>
-        <div className='Lottery__balls'>
+      <div className='lottery'>
+        <h1 className='lottery__title'>{this.props.title}</h1>
+        <div className='lottery__balls'>
           {this.state.nums.map((n) => (
             <Ball key={n} num={n} />
           ))}
         </div>
-        <button onClick={this.handleClick} className='Button'>
-          Generate
-        </button>
+        <Button onClick={this.handleClick} />
       </div>
     );
   }

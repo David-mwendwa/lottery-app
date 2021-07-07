@@ -1,0 +1,28 @@
+.lottery {
+  width: 70vw;
+  background-color: white;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, .3);
+  border: 1px solid lightgray;
+  margin: 30px auto;
+  padding: 30px;
+
+  display: flex;
+  flex-flow: column;
+
+  &__title {
+    align-self: center;
+    color: lightgray;
+    border-bottom: 2px dotted lightgrey;
+  }
+
+  &__balls {
+    border-radius: 3px;
+    margin: 20px 0 50px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+

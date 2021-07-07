@@ -1,0 +1,18 @@
+@import '../Variables/Variables.scss';
+
+
+
+
+
+body {
+  font-family: $font-primary;
+  color: $color-grey-dark-2;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+
+}
