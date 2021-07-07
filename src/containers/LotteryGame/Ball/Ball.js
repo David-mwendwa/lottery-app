@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import './Ball.css';
+import './Ball.scss';
 
 class Ball extends Component {
   render() {
-    return <div className='Ball'>{this.props.num}</div>;
+    return <div className='ball'>{this.props.num}</div>;
   }
 }
 

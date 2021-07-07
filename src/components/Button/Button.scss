@@ -1,5 +1,7 @@
+@import '../../Variables//Variables.scss';
+
 .btn {
-  background-color: orangered;
+  background-color: $color-primary-dark;
   color: white;
   width: 40%;
   padding: 10px;
@@ -10,12 +12,12 @@
   transition: all 500ms;
 
   &:hover {
-    background-color: rgb(228, 77, 23);
+    background-color: $color-primary;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
   }
 
   &:active {
-    background-color: orangered;
+    background-color: $color-primary-dark;
     transform: translateY(-2px);
     box-shadow: 0 2rem 6rem rgba(0, 0, 0, .3);
   }
