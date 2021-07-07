@@ -17,11 +17,19 @@ $color-grey-dark-1: #54483A;
 $color-grey-dark-2: #6D5D4B;
 
 // FONT VARIABLES
-$font-primary: 'Nunito',
+$font-primary: 'Kanit',
+sans-serif;
+$font-primary-2: 'Nunito',
 sans-serif;
 $font-display: 'Josefin Sans',
 sans-serif;
-$font-logo: 'Kaushan Script';
+
+$font-logo-1: 'Bungee Shade',
+cursive;
+$font-logo-2: 'Creepster',
+cursive;
+$font-logo-3: 'UnifrakturMaguntia',
+cursive;
 
 // RESPOSIVE BREAKPOINTS
 $bp-largest: 75em; // 1200px

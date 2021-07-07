@@ -1,0 +1,25 @@
+.Container {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+
+.Pokedex-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  // grid-template-rows: repeat(2, minmax(200px, min-content));
+  // grid-auto-rows: min-content;
+
+  grid-gap: 40px;
+  padding: 40px;
+}
+
+.Danger {
+  color: red;
+  font-weight: bold;
+}
+
+.Success {
+  color: green;
+  font-weight: bold;
+}

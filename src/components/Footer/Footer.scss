@@ -3,9 +3,10 @@
 .footer {
   padding: 3rem;
   background-color: $color-blue-dark-1;
-  border-top: 1px solid rgb(37, 37, 53);
+  border-top: 1px dotted rgb(37, 37, 53);
   color: $color-grey-light-2;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 100;
   grid-row: 3 / 4;
   grid-column: 1 / -1;
 

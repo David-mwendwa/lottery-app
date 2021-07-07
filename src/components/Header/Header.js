@@ -14,7 +14,7 @@ const Header = () => {
       <nav className='navigation'>
         <Link to='/lottery'>Lotto</Link>
         <Link to='##'>Dice</Link>
-        <Link to='##'>Pokedex</Link>
+        <Link to='/pokedex'>Pokedex</Link>
         <Link to='##'>Coinflip</Link>
         <Link to='##'>Cards</Link>
       </nav>
