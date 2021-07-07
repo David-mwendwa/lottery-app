@@ -12,14 +12,14 @@ class PokeCard extends Component {
       number <= 999 ? `00${number}`.slice(-3) : number;
 
     return (
-      <div className='PokeCard' keys={id}>
+      <div className='Pokecard' keys={id}>
         <h3 className='Pokecard__title'>{name}</h3>
         <div className='Pokecard__image'>
           <img src={`${POKE_API}/${padToThree(id)}.png`} alt={name} />
         </div>
-        <div>
-          <div className='Pokecard__data'>Type: {type}</div>
-          <div className='Pokecard__data'>EXP: {base_experience}</div>
+        <div className='Pokecard__data'>
+          <div className='Pokecard__data-type'>Type: {type}</div>
+          <div className='Pokecard__data-exp'>EXP: {base_experience}</div>
         </div>
       </div>
     );

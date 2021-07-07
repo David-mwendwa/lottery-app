@@ -5,8 +5,9 @@
   color: $color-grey-light-2;
   border-bottom: 1px dotted rgb(37, 37, 53);
   box-shadow: 0 0 1rem rgba($color: white, $alpha: .3);
-  padding: 0 1rem;
-  font-weight: 100;
+  padding: 0 .9rem;
+  font-size: 1.6rem;
+  font-weight: 200;
   grid-row: 1 / 2;
   grid-column: 1 / -1;
 
@@ -17,7 +18,7 @@
 
 .logo {
   font-family: $font-logo-2;
-  font-size: 3rem;
+  font-size: 2.5rem;
 
   a {
     text-decoration: none;
@@ -33,15 +34,14 @@
 
   a {
     text-decoration: none;
-    font-size: 2rem;
     font-family: inherit;
     color: inherit;
     
     padding: 1rem;
 
     &:hover {
-      background-color: $color-blue-dark-2;
-      color: whitesmoke;
+      background-color: $color-grey-light-2;
+      color: $color-blue-dark-1;
     }
   }
 }

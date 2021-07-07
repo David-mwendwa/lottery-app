@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import Lottery from './LotteryGame/Lottery/Lottery';
 import PokeGame from './PokeGame/PokeGame';

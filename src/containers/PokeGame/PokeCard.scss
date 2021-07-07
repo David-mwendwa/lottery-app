@@ -1,39 +1,50 @@
-.PokeCard {
+@import '../../Variables/Variables.scss';
+
+.Pokecard {
   background-color: white;
-  color: black;
-  padding: 10px;
-  font-family: monospace;
+  color: $color-secondary;
+  //font-family: monospace;
   border-radius: 3px;
   border: 1px solid rgb(201, 197, 197);
-  box-shadow: 1px 1px 2px 2px rgba(190, 185, 185, 0.5);
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, minmax(50px, min-content));
-  justify-items: center;
-}
-
-.Pokecard__title {
-  margin-bottom: 1rem;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.Pokecard__image {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+  width: 15vw;
+  padding: .5rem 0;
+  
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: lightgrey;
-  border-radius: 3px;
-  margin-bottom: 20px;
+  flex-flow: column;
+
+  @media only screen and (max-width: 600px) {
+    
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    margin: .5rem 0;
+    padding: .5rem 0;
+
+    img {
+      width: 50%;
+      transition: all ease 500ms;
+
+      &:hover {
+        transform: scale(1.25);
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+
+    &__data {
+      font-family: inherit;
+      font-weight: 700;
+    }
+  }
 }
 
-.Pokecard__image img {
-  transition: all ease 500ms;
-}
-
-.Pokecard__image img:hover {
-  transform: scale(1.25);
-  opacity: 0.7;
-  cursor: pointer;
-}
