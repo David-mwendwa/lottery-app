@@ -1,10 +1,10 @@
 @import '../../Variables/Variables.scss';
 
 .header {
-  background-color: whitesmoke;
-  color: $color-blue-dark-2;
-  border-bottom: 1px solid rgb(199, 196, 196);
-  box-shadow: 0 0 1rem rgba($color: #000000, $alpha: .3);
+  background-color: $color-blue-dark-1;
+  color: $color-grey-light-2;
+  border-bottom: 1px solid rgb(37, 37, 53);
+  box-shadow: 0 0 1rem rgba($color: white, $alpha: .3);
   padding: 0 1rem;
   grid-row: 1 / 2;
   grid-column: 1 / -1;
@@ -15,7 +15,7 @@
 }
 
 .logo {
-  font-family: 'Kaushan Script',
+  font-family: $font-logo,
   cursive;
   font-size: 3rem;
 }
@@ -28,7 +28,7 @@
   a {
     text-decoration: none;
     font-size: 2rem;
-    font-family: $font-primary;
+    font-family: inherit;
     color: inherit;
     padding: 1rem;
 

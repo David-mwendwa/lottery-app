@@ -1,8 +1,15 @@
 @import '../../Variables/Variables.scss';
 
 .footer {
+  padding: 3rem;
+  background-color: $color-blue-dark-1;
+  border-top: 1px solid rgb(37, 37, 53);
+  color: $color-grey-light-2;
+  font-size: 1.2rem;
   grid-row: 3 / 4;
   grid-column: 1 / -1;
 
-  background-color: $color-blue-dark-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

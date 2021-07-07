@@ -1,9 +1,5 @@
 @import '../Variables/Variables.scss';
 
-
-
-
-
 body {
   font-family: $font-primary;
   color: $color-grey-dark-2;
@@ -12,6 +8,15 @@ body {
 }
 
 .container {
+  background-color: $color-grey-dark-1;
+  background-image: linear-gradient(rgba($color-blue-dark-2, .9), rgba($color-blue-dark-1, .9)),
+  url(../images/casino1.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   grid-row: 2 / 3;
   grid-column: 1 / -1;
 

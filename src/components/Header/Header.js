@@ -1,15 +1,18 @@
+import Logo from '../../images/logo.png'
+
 import './Header.scss';
 
 const Header = () => {
   return (
     <div className='header'>
       <h1 className='logo'>Gamer</h1>
+
       <nav className='navigation'>
-        <a href='##'>lotto</a>
-        <a href='##'>dice</a>
-        <a href='##'>pokedex</a>
-        <a href='##'>coinflip</a>
-        <a href='##'>cards</a>
+        <a href='##'>Lotto</a>
+        <a href='##'>Dice</a>
+        <a href='##'>Pokedex</a>
+        <a href='##'>Coinflip</a>
+        <a href='##'>Cards</a>
       </nav>
     </div>
   );

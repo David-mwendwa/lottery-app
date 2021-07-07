@@ -1,5 +1,5 @@
 .Layout {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: min-content 80vh 200px;
+  grid-template-rows: 7vh calc(100vh - 7vh) min-content;
 }
