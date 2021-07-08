@@ -4,6 +4,7 @@
   width: 80vw;
   height: 80wh;
   background-color: white;
+  font-size: 1.5rem;
   grid-column: 1 / -1;
   grid-row: 2 / -2;
   justify-self: center;
@@ -12,4 +13,19 @@
   flex-flow: column;
   align-items: center;
   justify-content: space-evenly;
+
+  &__res {
+    font-family: inherit;
+
+    span {
+      font-weight: 700;
+
+      &:nth-child(2) {
+        color: rgb(79, 206, 79);
+      }
+      &:nth-child(3) {
+        color: rgb(243, 50, 50);
+      }
+    }
+  }
 }
