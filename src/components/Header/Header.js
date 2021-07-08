@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 
+//import Logo from '../Logo/Logo';
+
 import './Header.scss';
 
 const Header = () => {
   return (
     <div className='header'>
       <h1 className='logo'>
-        <Link to='/'>Gamer</Link>
+        <Link to='/'>Gaming Master</Link>
       </h1>
 
       <nav className='navigation'>
@@ -14,7 +16,7 @@ const Header = () => {
         <Link to='##'>Dice</Link>
         <Link to='/pokedex'>Pokedex</Link>
         <Link to='/coinflip'>Coinflip</Link>
-        <Link to='##'>Cards</Link>
+        <Link to='/colorbox'>Colorbox</Link>
       </nav>
     </div>
   );

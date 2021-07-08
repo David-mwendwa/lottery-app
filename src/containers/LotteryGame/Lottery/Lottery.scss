@@ -5,18 +5,17 @@
   background-color: white;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, .3);
   border: 1px solid lightgray;
-  padding: 5rem;
   grid-column: 1 / -1;
   grid-row: 2 / -2;
   justify-self: center;
 
   display: flex;
   flex-flow: column;
+  justify-content: space-evenly;
 
   &__title {
     align-self: center;
-    color: lightgray;
-    border-bottom: 2px dotted lightgrey;
+    border-bottom: 2px dotted currentColor;
   }
 
   &__balls {

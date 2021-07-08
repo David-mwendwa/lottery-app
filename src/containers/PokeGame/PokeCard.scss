@@ -2,7 +2,6 @@
 
 .Pokecard {
   background-color: white;
-  color: $color-secondary;
   //font-family: monospace;
   border-radius: 3px;
   border: 1px solid rgb(201, 197, 197);
@@ -13,13 +12,15 @@
   display: flex;
   flex-flow: column;
 
-  @media only screen and (max-width: 600px) {
-    
-  }
+  
 
   &__title {
     font-weight: bold;
     font-size: 1.5rem;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1rem;
+    }
   }
 
   &__image {

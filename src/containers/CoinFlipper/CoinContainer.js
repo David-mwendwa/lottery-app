@@ -42,7 +42,7 @@ class CoinContainer extends Component {
   render() {
     return (
       <div className='coinflip'>
-        <h2 className='coinflip__coins'>Lets flip a coin!</h2>
+        <h2 className='coinflip__title'>Lets flip a coin!</h2>
         {this.state.currCoin && <Coin info={this.state.currCoin} />}
         <div className='coinflip__res'>
           Out of <span>{this.state.nFlips}</span> flip(s), you've got{' '}
