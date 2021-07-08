@@ -13,7 +13,7 @@ const Header = () => {
         <Link to='/lottery'>Lotto</Link>
         <Link to='##'>Dice</Link>
         <Link to='/pokedex'>Pokedex</Link>
-        <Link to='##'>Coinflip</Link>
+        <Link to='/coinflip'>Coinflip</Link>
         <Link to='##'>Cards</Link>
       </nav>
     </div>

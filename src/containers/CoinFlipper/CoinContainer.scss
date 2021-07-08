@@ -1,0 +1,15 @@
+@import '../../Variables/Variables.scss';
+
+.coinflip {
+  width: 80vw;
+  height: 80wh;
+  background-color: white;
+  grid-column: 1 / -1;
+  grid-row: 2 / -2;
+  justify-self: center;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
