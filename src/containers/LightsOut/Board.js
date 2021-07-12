@@ -89,10 +89,21 @@ class Board extends Component {
     // TODO
     // make table board
     // TODO
+    let tableBoard = []
+    for (let y = 0; y<this.props.nrows; y++) {
+      let row = []
+      for (let x=0; this.props.ncols; x++) {
+        let coord = `${y}-${x}`
+        row.push(<Cell key={coord} isList={this.state.board[y[x]]} />)
+      }
+      tableBoard.push(<tr key={y}>{row}</tr>)
+    }
     return (
-      <div className='board-container'>
-        Helooooooooooooooooooo
-      </div>
+      <table className='board-container'>
+        <tbody>
+          {tableBoard}
+        </tbody>
+      </table>
     )
   }
 }
