@@ -48,7 +48,7 @@ class Hangman extends Component {
 
   /** generateButtons: return array of letter buttons to render */
   generateButtons() {
-    return 'abcdefghijklmnopqrstuvwxyz'.split('').map((ltr, i) => (
+    return 'abcdefghijklmnopqrstuvwxyz'.split('').map((ltr) => (
       <button
         key={ltr}
         value={ltr}
@@ -67,6 +67,7 @@ class Hangman extends Component {
         <div className='Hangman-side'>
           <h1>Hangman</h1>
           <p className='Hangman-word'>{this.guessedWord()}</p>
+          <p>Guessed wrong {this.state.nWrong}</p>
           <p className='Hangman-btns'>{this.generateButtons()}</p>
         </div>
       </div>
