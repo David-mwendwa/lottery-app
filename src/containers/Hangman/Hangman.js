@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import { randomWord } from './words';
+
 import './Hangman.css';
 import img0 from './images/0.jpg';
 import img1 from './images/1.jpg';
@@ -20,7 +23,7 @@ class Hangman extends Component {
     this.state = {
       nWrong: 0,
       guessed: new Set(),
-      answer: 'apple',
+      answer: randomWord(),
     };
     this.handleGuess = this.handleGuess.bind(this);
   }
@@ -62,7 +65,7 @@ class Hangman extends Component {
   /** render: render game */
   render() {
     let gameOver = this.state.nWrong >= this.props.maxWrong;
-    const altText = `${this.state.nWrong}/${this.props.maxWrong} guesses`
+    const altText = `${this.state.nWrong}/${this.props.maxWrong} guesses`;
     return (
       <div className='Hangman'>
         <img src={this.props.images[this.state.nWrong]} alt={altText} />
@@ -73,7 +76,11 @@ class Hangman extends Component {
           </p>
           <p>Guessed wrong {this.state.nWrong}</p>
           <p className='Hangman-btns'>
-            {!gameOver ? this.generateButtons() : <h2 style={{color: 'red'}}>You lose!</h2>}
+            {!gameOver ? (
+              this.generateButtons()
+            ) : (
+              <h2 style={{ color: 'red' }}>You lose!</h2>
+            )}
           </p>
         </div>
       </div>
