@@ -57,9 +57,13 @@ export class TodoList extends Component {
 
     return (
       <div className='todo__container'>
-        <h1>Todo List!</h1>
-        <ul>{todos}</ul>
-        <NewTodoForm createTodo={this.create} />
+        <div className='TodoList'>
+          <h1>
+            Todo List! <span>A simple react todo list app</span>
+          </h1>
+          <ul>{todos}</ul>
+          <NewTodoForm createTodo={this.create} />
+        </div>
       </div>
     );
   }
