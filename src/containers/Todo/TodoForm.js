@@ -3,13 +3,13 @@ import { v4 as uuidv4 } from 'uuid';
 import './TodoForm.scss';
 
 export class TodoForm extends Component {
-  state = { todo: '' };
+  state = { task: '' };
 
   handleSubmit = (e) => {
     e.preventDefault();
     const newTodo = { ...this.state, id: uuidv4() };
     this.props.addTodo(newTodo);
-    this.setState({ todo: '' });
+    this.setState({ task: '' });
   };
 
   handleChange = (e) => {
@@ -20,9 +20,9 @@ export class TodoForm extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <input
-          id='todo'
-          name='todo'
-          value={this.state.todo}
+          id='task'
+          name='task'
+          value={this.state.task}
           onChange={this.handleChange}
         />
         <button id='btn'>Submit</button>

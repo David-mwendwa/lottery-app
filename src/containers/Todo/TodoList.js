@@ -4,11 +4,17 @@ import TodoForm from './TodoForm';
 
 class Todo extends React.Component {
   state = {
-    todos: [{ task: 'walk the fish' }, { task: 'Groom the chicken' }],
+    todos: [],
   };
 
   addTodo = (newTodo) => {
     this.setState({ todos: [...this.state.todos, newTodo] });
+  };
+
+  removeTodo = (id) => {
+    this.setState((state) => ({
+      todos: state.todos.filter((todo) => todo.id !== id),
+    }));
   };
 
   render() {
@@ -23,9 +29,11 @@ class Todo extends React.Component {
             {this.state.todos.map((todo) => (
               <div className='todo__item'>
                 {todo.task}
-                <li className='todo__actions'>
+                <li key={todo.id} className='todo__actions'>
                   <i className='fas fa-pen'></i>
-                  <i className='fas fa-trash'></i>
+                  <i
+                    onClick={() => this.removeTodo(todo.id)}
+                    className='fas fa-trash'></i>
                 </li>
               </div>
             ))}
