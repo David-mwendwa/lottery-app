@@ -91,14 +91,22 @@ class Board extends Component {
   /** Render game board or winning message. */
 
   render() {
-    // if the game is won, just show a winning msg & render nothing else
-    // TODO
-    // make table board
-    // TODO
-    let tableBoard = [];
+    // TODO: if the game is won, just show a winning msg & render nothing else
+    if (this.state.hasWon) {
+      return (
+        <div className='board-title'>
+          <div className='winner'>
+            <span className='neon-orange'>YOU</span>
+            <span className='neon-blue'>WIN!</span>
+          </div>
+        </div>
+      );
+    }
+    // TODO: make table board
+    let tblBoard = [];
     for (let y = 0; y < this.props.nrows; y++) {
       let row = [];
-      for (let x = 0; this.props.ncols; x++) {
+      for (let x = 0; x < this.props.ncols; x++) {
         let coord = `${y}-${x}`;
         row.push(
           <Cell
@@ -108,12 +116,18 @@ class Board extends Component {
           />
         );
       }
-      tableBoard.push(<tr key={y}>{row}</tr>);
+      tblBoard.push(<tr key={y}>{row}</tr>);
     }
     return (
-      <table className='board-container'>
-        <tbody>{tableBoard}</tbody>
-      </table>
+      <div className='board-container'>
+        <div className="board-title">
+          <div className='neon-orange'>Lights</div>
+          <div className='neon-blue'>Out</div>
+        </div>
+        <table className='board'>
+          <tbody>{tblBoard}</tbody>
+        </table>
+      </div>
     );
   }
 }

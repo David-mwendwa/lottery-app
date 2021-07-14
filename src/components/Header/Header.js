@@ -12,6 +12,7 @@ const Header = () => {
       </h1>
 
       <nav className='navigation'>
+        <Link to='/todo'>Todo</Link>
         <Link to='/lottery'>Lotto</Link>
         <Link to='/hangman'>Hangman</Link>
         <Link to='/lights-out'>Lightsout</Link>

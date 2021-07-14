@@ -1,0 +1,13 @@
+.todo__container {
+  background-image: linear-gradient(to right, lightblue, rgb(221, 173, 230));
+  width: 80vw;
+  height: 80wh;
+  grid-column: 1 / -1;
+  grid-row: 2 / -2;
+  justify-self: center;
+
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
