@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Todo.scss';
 
 export class Todo extends Component {
   state = { isEditing: false, task: this.props.task };
@@ -20,6 +21,10 @@ export class Todo extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  handleToggle = () => {
+    this.props.toggleTodo(this.props.id);
+  };
+
   render() {
     let result = this.state.isEditing ? (
       <div>
@@ -37,7 +42,11 @@ export class Todo extends Component {
       <div>
         <button onClick={this.toggleForm}>edit</button>
         <button onClick={this.handleRemove}>x</button>
-        <li>{this.props.task}</li>
+        <li
+          onClick={this.handleToggle}
+          className={this.props.completed ? 'completed' : ''}>
+          {this.props.task}
+        </li>
       </div>
     );
 
