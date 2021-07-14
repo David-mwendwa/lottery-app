@@ -17,7 +17,7 @@ export class TodoList extends Component {
   };
 
   remove = (id) => {
-    this.setState({ todos: this.state.filter((t) => t.id !== id) });
+    this.setState({ todos: this.state.todos.filter((t) => t.id !== id) });
   };
 
   render() {
