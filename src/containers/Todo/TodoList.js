@@ -5,6 +5,8 @@ import TodoForm from './TodoForm';
 class Todo extends React.Component {
   state = {
     todos: [],
+    isEditing: false,
+    task: '',
   };
 
   addTodo = (newTodo) => {
@@ -15,6 +17,30 @@ class Todo extends React.Component {
     this.setState((state) => ({
       todos: state.todos.filter((todo) => todo.id !== id),
     }));
+  };
+
+  toggleForm = () => {
+    this.setState({ isEditing: !this.state.isEditing });
+  };
+
+  handleUpdate = (e, id) => {
+    e.preventDefault();
+    this.setState({ isEditing: false });
+  };
+
+  handleUpdate = (e) => {
+    e.preventDefault()
+    this.update()
+  }
+
+  update = (id, updatedTask) => {
+    const updtaedTodos = this.state.todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, task: updatedTask };
+      }
+      return todo;
+    });
+    this.setState({ todos: updtaedTodos });
   };
 
   render() {
@@ -28,13 +54,29 @@ class Todo extends React.Component {
           <ul>
             {this.state.todos.map((todo) => (
               <div className='todo__item'>
-                {todo.task}
-                <li key={todo.id} className='todo__actions'>
-                  <i className='fas fa-pen'></i>
-                  <i
-                    onClick={() => this.removeTodo(todo.id)}
-                    className='fas fa-trash'></i>
-                </li>
+                {this.state.isEditing ? (
+                  <form onSubmit={this.handleUpdate}>
+                    <input
+                      type='text'
+                      value={todo.task}
+                      name='task'
+                      onChange={() => this.handleChange(todo.id)}
+                    />
+                    <button>Save</button>
+                  </form>
+                ) : (
+                  <>
+                    {todo.task}
+                    <form key={todo.id} className='todo__actions'>
+                      <button
+                        onClick={this.toggleForm}
+                        className='fas fa-pen'></button>
+                      <button
+                        onClick={() => this.removeTodo(todo.id)}
+                        className='fas fa-trash'></button>
+                    </form>
+                  </>
+                )}
               </div>
             ))}
           </ul>

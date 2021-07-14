@@ -1,6 +1,6 @@
 import { Route } from 'react-router-dom';
 
-import TodoList from './Todo/TodoList';
+import TodoList from './Todo2/TodoList';
 import Lottery from './LotteryGame/Lottery/Lottery';
 import PokeGame from './PokeGame/PokeGame';
 import CoinContainer from './CoinFlipper/CoinContainer';
