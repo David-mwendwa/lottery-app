@@ -20,15 +20,28 @@ export class TodoList extends Component {
     this.setState({ todos: this.state.todos.filter((t) => t.id !== id) });
   };
 
+  update = (id, updatedTask) => {
+    const updatedTodos = this.state.todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, task: updatedTask };
+      }
+      return todo;
+    });
+    this.setState({ todos: updatedTodos });
+  };
+
   render() {
-    const todos = this.state.todos.map((todo) => (
-      <Todo
-        id={todo.id}
-        key={todo.id}
-        task={todo.task}
-        removeTodo={this.remove}
-      />
-    ));
+    const todos = this.state.todos.map((todo) => {
+      return (
+        <Todo
+          id={todo.id}
+          key={todo.id}
+          task={todo.task}
+          removeTodo={this.remove}
+          updateTodo={this.update}
+        />
+      );
+    });
 
     return (
       <div className='todo__container'>
