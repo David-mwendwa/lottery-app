@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Card from './Card'
+import Card from './Card';
 
 import './Deck.scss';
 
@@ -19,9 +19,9 @@ class Deck extends Component {
     try {
       let cardUrl = `${API_BASE_URL}/${id}/draw`;
       let cardRes = await axios.get(cardUrl);
-      console.log(cardRes)
+      console.log(cardRes);
       if (!cardRes.data.success) {
-        throw new Error('No card remaining')
+        throw new Error('No card remaining');
       }
       let card = cardRes.data.cards[0];
       this.setState((st) => ({
@@ -35,19 +35,21 @@ class Deck extends Component {
         ],
       }));
     } catch (err) {
-      alert(err)
+      alert(err);
     }
   };
 
   render() {
-    const cards = this.state.drawn.map(c => (
+    const cards = this.state.drawn.map((c) => (
       <Card key={c.id} name={c.name} image={c.image} />
-    ))
+    ));
     return (
-      <div className='deck'>
-        <h1>Card Dealer</h1>
-        {cards}
-        <button onClick={this.getCard}>Get Card!</button>
+      <div className='deck-container'>
+        <div className='Deck-cardarea'>{cards}</div>
+        <div>
+          <h1>Card Dealer</h1>
+          <button onClick={this.getCard}>Get Card!</button>
+        </div>
       </div>
     );
   }
