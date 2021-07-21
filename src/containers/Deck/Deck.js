@@ -19,6 +19,7 @@ class Deck extends Component {
     try {
       let cardUrl = `${API_BASE_URL}/${id}/draw`;
       let cardRes = await axios.get(cardUrl);
+      console.log(cardRes)
       if (!cardRes.data.success) {
         throw new Error('No card remaining')
       }
