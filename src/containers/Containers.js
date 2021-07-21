@@ -7,6 +7,7 @@ import CoinContainer from './CoinFlipper/CoinContainer';
 import BoxContainer from './ColorBox/BoxContainer';
 import Hangman from './Hangman/Hangman'
 import Board from './LightsOut/Board'
+import Deck from './Deck/Deck'
 
 import './Containers.scss';
 
@@ -20,6 +21,7 @@ const Container = () => {
       <Route path='/pokedex' component={PokeGame} />
       <Route path='/coinflip' component={CoinContainer} />
       <Route path='/colorbox' component={BoxContainer} />
+      <Route path='/deck' component={Deck} />
     </div>
   );
 };

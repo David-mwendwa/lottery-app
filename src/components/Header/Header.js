@@ -19,6 +19,7 @@ const Header = () => {
         <Link to='/pokedex'>Pokedex</Link>
         <Link to='/coinflip'>Coinflip</Link>
         <Link to='/colorbox'>Colorbox</Link>
+        <Link to='/deck'>Deck</Link>
       </nav>
     </div>
   );

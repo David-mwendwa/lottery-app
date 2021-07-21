@@ -58,7 +58,7 @@ export class Todo extends Component {
       </div>
     );
 
-    return this.state.task && this.state.task.trim().length > 3 && result;
+    return this.state.task && this.state.task.trim().length > 0 && result;
   }
 }
 
